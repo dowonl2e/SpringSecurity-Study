@@ -42,7 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 		http
-			.csrf().disable() // Rest API : CSRF보안이 필요 없으므로 미사용 처리 (Rest 방식의 경우 미사용 처리 필요함)
+			.csrf().disable() // Rest API : CSRF보안이 필요 없으므로 미사용 처리(Rest 방식의 경우 미사용 처리 필요함)
 			.httpBasic().disable() // Rest API : 기본설정 사용안함(기본설정은 비인증시 로그인화면으로 리다이렉트 됨)
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) // jwt 토큰으로 인증 하므로 세션은 필요 없어 생성하지 않음
 			.and()
