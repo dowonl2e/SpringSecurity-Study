@@ -31,6 +31,11 @@ public class UserApiController {
 	private final PasswordEncoder passwordEncoder;
 	private final JwtTokenProvider jwtTokenProvider;
 	
+	/**
+	 * 사용자 회원가입
+	 * @param params
+	 * @return
+	 */
 	@PostMapping(value = "/signup")
 	public UserResponseDTO signUp(@RequestBody final UserRequestDTO params) {
 		params.setPassword(passwordEncoder.encode(params.getPassword()));
@@ -38,6 +43,11 @@ public class UserApiController {
 		return userService.save(params);
 	}
 	
+	/**
+	 * 사용자 로그인
+	 * @param params
+	 * @return
+	 */
 	@PostMapping(value = "/signin")
 	public ResponseEntity<? extends BasicResponse> signIn(@RequestBody final UserRequestDTO params) {
 		Optional<User> user = Optional.ofNullable((User)userService.loadUserByUsername(params.getEmail()));
