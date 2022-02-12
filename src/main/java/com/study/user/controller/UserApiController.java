@@ -32,7 +32,7 @@ public class UserApiController {
 	private final JwtTokenProvider jwtTokenProvider;
 	
 	/**
-	 * 사용자 회원가입
+	 * 사용자 회원가입 Mapping
 	 * @param params
 	 * @return
 	 */
@@ -44,7 +44,7 @@ public class UserApiController {
 	}
 	
 	/**
-	 * 사용자 로그인
+	 * 사용자 로그인 Mapping
 	 * @param params
 	 * @return
 	 */
