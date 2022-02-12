@@ -19,6 +19,11 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * JWT 토큰 인증 Provider
+ * @author dowonlee
+ *
+ */
 @RequiredArgsConstructor
 @Component
 public class JwtTokenProvider {
